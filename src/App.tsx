@@ -8,7 +8,7 @@ import ExpedientesComponent from './views/expedientes/expedientesComponent';
 import NotificacionesComponent from './views/notificaciones/notificacionesComponent';
 import CreacionDocumento from './views/creacionDocumento/creacionDocumento'; */
 import MainLayout from './layouts/mainLayout';
-import DashboardComponent from './views/dashboard/dashboardComponent';
+import ControlDeActasComponent from './views/controlDeActas/controlDeActasComponent';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           path="/"
           element={
             <MainLayout>
-              <DashboardComponent />
+              <ControlDeActasComponent />
             </MainLayout>
           }
         />
