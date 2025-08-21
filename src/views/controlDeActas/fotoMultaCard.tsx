@@ -17,10 +17,10 @@ interface Fotomulta {
 
 const FotoMultaCard = ({ data, onClick }: CardProps) => {
   return (
-    <div className="w-28 h-28  shrink-0 flex flex-col items-center justify-center rounded-lg shadow"
+    <button className="w-28 h-28  shrink-0 flex flex-col items-center justify-center rounded-lg shadow"
     onClick={() => onClick(data)}>
         <img src={fotomultaEjemplo} alt="Foto multa" className="" />
-    </div>
+    </button>
   );
 };
 

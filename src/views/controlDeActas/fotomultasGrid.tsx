@@ -13,26 +13,21 @@ interface Fotomulta {
 }
 
 function FotoMultasGrid() {
-    const [selectedCard, setSelectedCard] = useState<Fotomulta | null>(null);
+  const [selectedCard, setSelectedCard] = useState<Fotomulta | null>(null);
+
   const fotomultas: Fotomulta[] = fotomultasData;
+
   return (
     <div>
-    <div className="flex flex-wrap gap-4">
-      {fotomultas.map((item: Fotomulta) => (
-        <FotoMultaCard key={item.id}  data={item} onClick={setSelectedCard}/>
-      ))}
-    </div>
-    <ValidarFotomulta
-        isOpen={!!selectedCard}
-        onClose={() => setSelectedCard(null)}
-      >
-        {selectedCard && (
-          <div>
-            <h2 className="text-xl font-bold">{selectedCard.fecha}</h2>
-            <p className="mt-2">{selectedCard.interseccion}</p>
-          </div>
-        )}
-      </ValidarFotomulta>
+      <div className="flex flex-wrap gap-4">
+        {fotomultas.map((item: Fotomulta) => (
+          <FotoMultaCard key={item.id} data={item} onClick={setSelectedCard} />
+        ))}
+      </div>
+
+      <ValidarFotomulta isOpen={!!selectedCard} onClose={() => setSelectedCard(null)} /* validar={() => setValidar(true)} *//>
+      
+
     </div>
   );
 }
